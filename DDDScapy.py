@@ -7,7 +7,7 @@ channel = chr(6)  #adjust as required
 interface = 'wlan0mon'  #adjust as required
  
 frame= RadioTap()\
-      /Dot11(type=0, subtype=4, addr1=recipients_mac_adress, addr2=your_mac_adress, addr3=your_mac_adress)\
+      /Dot11(type=0, subtype=4, addr1=recipients_mac_adress, addr2=your_mac_adress, addr3=recipients_mac_adress)\
       /Dot11ProbeReq()\
       /Dot11Elt(ID='SSID', info=ssid)\
       /Dot11Elt(ID='Rates', info='\x82\x84\x8b\x96\x0c\x12\x18')\
