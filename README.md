@@ -24,9 +24,10 @@ Receivers should write to output with whatever collection tool they're using
 e.g. sudo airodump-ng -c 6 -w DDD wlan0mon
 
 In a packet analyzer, stuffed probes can be filtered and then viewed within the bottom field of each probe request
-wlan.fc.type_subtype==4 && wlan.ssid contains "<target SSID>"
+wlan.fc.type_subtype==4 && wlan.ssid contains "target SSID"
 or
-wlan.fc.type_subtype==4 && wlan.sa==<MAC ADDRESS>
+wlan.fc.type_subtype==4 && wlan.sa==MAC ADDRESS
 
 
-Wireshark will display extra spaces within the message. To clean, copy the appropriate field as an ASCII stream and run through xxd -r -p 
+Wireshark will display extra spaces within the message. To clean, copy the appropriate field as an Hex stream and run through xxd -r -p. 
+Alternatively, right click on the frames Tag: Vendor Specific: Microsoft Corp., select Show Packet Bytes, and ensure pop-up is set to Decode as None and Show as ASCII.
