@@ -10,9 +10,11 @@ Edit DDDScapy.py, particularly the following fields:
 your_mac_adress (This field will spoof the MAC address in the transmitted frames)
 ssid (The SSID that will be directly probed )
 channel (transmit channel)
-interface (wlan interface to transmit -- I've always set to wlan0mon via airmon-ng)
+interface (wlan interface to transmit -- for example, use wlan0mon on channel 6 by running "sudo airmon-ng start wlan0mon <channel number> )
 
-After edits, you can run the script with python3 DDDScapy.py to test the script and write the outputs to output. If satisfied with the pcaps, uncomment the final line "#sendp" and run the script again. 
+After edits, you can run the script with:
+sudo python3 DDDScapy.py
+Initially, this tests the script and writes the output to .pcap files If satisfied with the pcaps, uncomment the final line "#sendp" in DDDScapy.py and run the script again to transmit. 
 
 RX Usage
 Receivers should be tuned to the specific channel 
